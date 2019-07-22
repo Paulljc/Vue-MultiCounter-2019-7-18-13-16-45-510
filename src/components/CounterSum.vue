@@ -6,10 +6,15 @@
 
 <script>
 export default {
-  props: {
-    total: {
-      type: Number,
-      default: 0
+  // props: {
+  //   total: {
+  //     type: Number,
+  //     default: 0
+  //   }
+  // },
+  computed:{
+    total(){
+      return this.$store.state.countSum
     }
   }
 }

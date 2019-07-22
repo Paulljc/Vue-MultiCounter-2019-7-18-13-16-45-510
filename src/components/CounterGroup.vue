@@ -17,16 +17,16 @@ export default {
     },
     total: Number
   },
-  computed: {
-    sum: {
-      get() {
-        return this.total
-      },
-      set(v) {
-        this.$emit("update:total", v)
-      }
-    }
-  }
+  // computed: {
+  //   sum: {
+  //     get() {
+  //       return this.total
+  //     },
+  //     set(v) {
+  //       this.$emit("update:total", v)
+  //     }
+  //   }
+  // }
 }
 </script>
 

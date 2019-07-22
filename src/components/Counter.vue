@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <button @click="change(1)"> + </button>
+    <button @click="increase"> + </button>
     <span v-text="number"/>
-    <button @click="change(-1)"> - </button>
+    <button @click="decrease"> - </button>
   </div>
 </template>
 
@@ -13,13 +13,21 @@ export default {
       number: 0
     }
   },
-  props: {
-    total: Number
-  },
+  // props: {
+  //   total: Number
+  // },
   methods: {
-    change(v) {
-      this.number += v;
-      this.$emit("update:total", this.total + v)
+    // change(v) {
+    //   this.number += v;
+    //   this.$emit("update:total", this.total + v)
+    // }
+    increase(){
+      this.number++;
+      this.$store.dispatch('increment')
+    },
+    decrease(){
+      this.number--;
+      this.$store.dispatch('decrease')
     }
   }
 }
